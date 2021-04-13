@@ -1,0 +1,224 @@
+/* ================= */
+/* ====Variables==== */
+/* ================= */
+
+:root {
+	--s-40: 40px;
+	--s-22: 22px;
+	--s-18: 18px;
+	--s-16: 16px;
+
+	--c-1: #333333;
+	--c-2: #ffffff;
+	--c-3: #73b21a;
+	--c-4: #4b7017;
+	--c-5: #666666;
+}
+
+/* ==================== */
+/* ====Basic Design==== */
+/* ==================== */
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a,
+label,
+span {
+	display: inline-block;
+}
+ul li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+button:focus,
+input:focus,
+textarea:focus,
+button,
+input,
+textarea {
+	outline: 0;
+	border: 0;
+}
+
+
+
+/* =========================== */
+/* ====Reusable Components==== */
+/* =========================== */
+
+.heading {
+	font-family: 'Montserrat-700';
+	font-size: var(--s-40);
+	color: var(--c-1);
+	font-style: italic;
+}
+s {
+	font-family: 'Montserrat-600';
+	font-size: var(--s-22);
+	color: var(--c-5);
+}
+
+.line-1 {
+	width: 124px;
+	border: 0;
+	border-bottom: 2px solid var(--c-3);
+	margin-bottom: 5px;
+}
+
+.line-2 {
+	width: 75px;
+	border: 0;
+	border-bottom: 2px solid var(--c-3);
+}
+
+.paragraph-1 {
+	font-family: 'Open-Sans-400';
+	font-size: var(--s-18);
+	color: var(--c-5);
+	max-width: 700px;
+	margin: auto; /*why?*/
+	text-align: center;
+}
+
+.paragraph-2 {
+	font-family: 'Open-Sans-400';
+	font-size: var(--s-16);
+	color: var(--c-2);
+}
+
+.primary-btn {
+	font-family: 'Montserrat-500';
+	font-size: var(--s-16);
+	color: var(--c-2);
+	border-radius: 30px;
+	background-color: var(--c-3);
+	padding: 15px 25px;
+	text-transform: uppercase;
+}
+
+.primary-btn:hover {
+	transform: translateY(-8px);
+}
+
+p {
+	line-height: 1.8;
+}
+
+/* =========================== */
+/* ======Header Starts======== */
+/* =========================== */
+
+.header-top {
+	background-color: var(--c-3);
+	padding: 20px 0;
+}
+
+/* fa icon */
+.email-phone li span,
+.login-signup li a,
+.login-signup li span {
+	font-family: 'Open-Sans-400';
+	font-size: var(--s-16);
+	color: var(--c-2);
+}
+
+.email-phone li:not(:last-child),
+.login-signup li:first-child {
+	margin-right: 30px;
+}
+
+.email-phone li span {
+	margin-right: 10px;
+}
+
+.email-phone li .time  /*shudhu .time class dile kaaj kore na keno?!*/ {
+	margin-right: 0;
+}
+
+.login-signup li .ap-btn {
+	background-color: var(--c-2);
+	color: var(--c-1);
+}
+
+/* =========Navebar Satrts====== */
+
+nav {
+	padding: 40px 0;
+}
+
+nav .main-menu ul li a {
+	font-family: 'Montserrat-600';
+	font-size: var(--s-16);
+	color: var(--c-1);
+}
+
+nav .main-menu ul li:not(:last-child) {
+	margin-right: 40px;
+}
+/* chaile class dhoreo kora jeto but child/pseudo class dhore korlam, "a" na dileo cholto? */
+nav .main-menu ul li:last-child a {
+	background-color: var(--c-3);
+	width: 35px;
+	height: 35px;
+	transition: 0.5s;
+	/* line-height: 35px;  class: text-center(horizontally) diyeo, majhe ana jay. cause, line-height vertically kaaj kore. (child tag e. i.e ekhane, i tag) */
+}
+
+nav .main-menu ul li:last-child a:hover {
+	transform: scale(1.2);
+}
+
+/* =========================== */
+/* ======Hero Starts======== */
+/* =========================== */
+.hero-section {
+	background-image: linear-gradient(rgba(50, 56, 69.7), rgba(98, 134, 47, 0.7)),
+		url(../images/banner.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	overflow: hidden; /*helps to crop img combining with margin : -T/B/L/R */
+}
+
+.hero-img img {
+margin-bottom: -10px; /*Look up^^*/
+}
+
+.hero-text .hero-title {
+	font-family: 'Montserrat-700';
+	font-size: 55px;
+	color: var(--c-2);
+}
+.hero-text .hero-desc {
+	font-family: 'Open-Sans-400';
+	font-size: var(--s-16);
+	color: var(--c-2);
+	margin: 45px 0;
+}
+
+.hero-text .hero-btn {
+	background-color: var(--c-2);
+	color: var(--c-3);
+}
+
+/* =========================== */
+/* ======Hero Ends======== */
+/* =========================== */
